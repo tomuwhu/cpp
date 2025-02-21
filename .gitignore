@@ -1,4 +1,7 @@
-cpp.*
-.vscode
-rbtree
-RBTree
+/*
+*
+!.gitignore
+!Readme.md
+!rbtree.cpp
+!rbt.*
+!input.txt
