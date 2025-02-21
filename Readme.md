@@ -1,4 +1,4 @@
-# Piros-Fekete fa implementáció (csak beszúrás)
+## Piros-Fekete fa implementáció (csak beszúrás)
 
 [Forrás](https://www.geeksforgeeks.org/red-black-tree-in-cpp/), de a hiba (az ismétlődő számok beszúrásánál) kijavítva, a törlés nem jó így kivettem.
 
@@ -10,6 +10,4 @@ g++ -std=c++11 rbtree.cpp -o rbtree && \
 dot -Tsvg rbt.dot > rbt.svg    
 ```
 
-## Eredmények
-
-[rbt.svg](rbt.svg)
+### Kimenet: [GraphViz dot-fájl](https://dreampuf.github.io/GraphvizOnline/), [SVG](rbt.svg)
