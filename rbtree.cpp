@@ -144,36 +144,16 @@ private:
     }
 
     // Utility function: Helper to print Red-Black Tree
-    void printHelper(Node* root, string indent, bool last)
-    {
-        if (root != nullptr) {
-            cout << indent;
-            if (last) {
-                cout << "R----";
-                indent += "   ";
-            }
-            else {
-                cout << "L----";
-                indent += "|  ";
-            }
-            string sColor
-                = (root->color == RED) ? "RED" : "BLACK";
-            cout << root->data << "(" << sColor << ")"
-                 << endl;
-            printHelper(root->left, indent, false);
-            printHelper(root->right, indent, true);
-        }
-    }
 
     void exportDOTHelper(Node* node, ofstream &file) {
         if (!node) return;
         file << node->data << " [label=\"" << node->data << "\", color=" << (node->color == RED ? "red" : "black") << "]\n";
         if (node->left) {
-            file << node->data << " -> " << node->left->data << "\n";
+            file << node->data << " -> " << node->left->data << " [color=\"blue\"]\n";
             exportDOTHelper(node->left, file);
         }
         if (node->right) {
-            file << node->data << " -> " << node->right->data << "\n";
+            file << node->data << " -> " << node->right->data << " [color=\"purple\"]\n";
             exportDOTHelper(node->right, file);
         }
     }
@@ -240,16 +220,6 @@ public:
         fixInsert(node);
     }  
 
-    // Public function: Print the Red-Black Tree
-    void printTree()
-    {
-        if (root == nullptr)
-            cout << "Tree is empty." << endl;
-        else {
-            cout << "Red-Black Tree:" << endl;
-            printHelper(root, "", true);
-        }
-    }
     void exportToDOT(const string& filename) {
         ofstream file(filename);
         file << "digraph RedBlackTree {\n";
