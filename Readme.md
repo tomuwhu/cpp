@@ -5,5 +5,5 @@
 Fa megjelenítése GraphViz segítségével:
 
 ```bash
-dot -Tsvg rbt.dot > rbt.svg    
+g++ -std=c++11 rbtree.cpp -o rbtree && "/Users/tom/Dev/cpp/"rbtree && dot -Tsvg rbt.dot > rbt.svg    
 ```
