@@ -1,6 +1,6 @@
 ## Piros-Fekete fa implementáció (csak beszúrás)
 
-[Forrás](https://www.geeksforgeeks.org/red-black-tree-in-cpp/), de a hiba (az ismétlődő számok beszúrásánál) kijavítva, a törlés nem jó így kivettem.
+[Eredeti forrás](https://www.geeksforgeeks.org/red-black-tree-in-cpp/), de a hiba (az ismétlődő számok beszúrásánál) kijavítva, a törlés nem volt jó, így kivettem.
 
 Fa megjelenítése [GraphViz](http://graphviz.org/) segítségével:
 
