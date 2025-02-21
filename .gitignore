@@ -1,5 +1,5 @@
-.*
-*
+.vscode
+cpp.*
 !.gitignore
 !Readme.md
 !rbtree.cpp
