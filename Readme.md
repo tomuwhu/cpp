@@ -9,3 +9,7 @@ g++ -std=c++11 rbtree.cpp -o rbtree && \
 "/Users/tom/Dev/cpp/"rbtree && \
 dot -Tsvg rbt.dot > rbt.svg    
 ```
+
+## Eredmények
+
+[rbt.svg](rbt.svg)
