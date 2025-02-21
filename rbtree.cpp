@@ -147,7 +147,7 @@ private:
 
     void exportDOTHelper(Node* node, ofstream &file) {
         if (!node) return;
-        file << node->data << " [style=filled, label=\"" << node->data << "\", color=" << (node->color == RED ? "pink" : "lightgray") << "]\n";
+        file << node->data << " [style=filled, label=\"" << node->data << "\", fontcolor=" << (node->color == RED ? "black" : "white") << ", color=" << (node->color == RED ? "violet" : "black") << "]\n";
         if (node->left) {
             file << node->data << " -> " << node->left->data << " [color=\"blue\"]\n";
             exportDOTHelper(node->left, file);
@@ -222,7 +222,7 @@ public:
 
     void exportToDOT(const string& filename) {
         ofstream file(filename);
-        file << "digraph RedBlackTree {\n";
+        file << "digraph RedBlackTree {\nbgcolor=\"lightblue\"\n";
         exportDOTHelper(root, file);
         file << "}";
         file.close();
