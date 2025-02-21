@@ -147,7 +147,7 @@ private:
 
     void exportDOTHelper(Node* node, ofstream &file) {
         if (!node) return;
-        file << node->data << " [label=\"" << node->data << "\", color=" << (node->color == RED ? "red" : "black") << "]\n";
+        file << node->data << " [style=filled, label=\"" << node->data << "\", color=" << (node->color == RED ? "pink" : "lightgray") << "]\n";
         if (node->left) {
             file << node->data << " -> " << node->left->data << " [color=\"blue\"]\n";
             exportDOTHelper(node->left, file);
